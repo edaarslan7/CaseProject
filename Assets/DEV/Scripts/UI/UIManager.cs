@@ -51,4 +51,9 @@ public class UIManager : MonoBehaviour
         }
     }
     #endregion
+
+    public void UpdateScore(float amount)
+    {
+        (screens[(int)ScreenTags.GamePlayScreen] as GamePlayScreen).UpdateScore(amount);
+    }
 }

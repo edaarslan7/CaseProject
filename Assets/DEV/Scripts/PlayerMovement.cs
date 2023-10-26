@@ -141,6 +141,7 @@ public class PlayerMovement : MonoBehaviour
             other.GetComponentInParent<Gem>().Dismiss();
             PlayerDataModel.Data.Score += 1;
             PlayerDataModel.Data.Save();
+            UIManager.Instance.UpdateScore(PlayerDataModel.Data.Score);
         }
         if (other.CompareTag("Door"))
         {
